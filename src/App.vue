@@ -9,7 +9,9 @@ import SponsorList from "./components/SponsorList.vue";
         <Header/>
       </header>
       <main>
-        <SponsorList/>
+        <!-- <SponsorList/> -->
       </main>
+
+        <router-view></router-view>
   </div>
 </template>

@@ -21,24 +21,24 @@
           class="flex items-center uppercase font-medium text-xs tracking-nav text-bluee-300"
         >
           <li class="border-l-2 border-y-2 border-bluee-100 rounded-l-md">
-            <a
-              class="py-3.5 px-14 inline-block hover:bg-primary hover:text-white ease duration-300 rounded-l-md"
-              href="#"
-              >Dashboard</a
+            <RouterLink
+              class="py-3.5 px-14 inline-block hover:bg-blue-400 hover:text-white ease duration-300 rounded-l-md"
+              to="/dashboard"
+              >Dashboard</RouterLink
             >
           </li>
           <li class="border-y-2 border-bluee-100">
-            <a
-              class="py-3.5 px-14 inline-block hover:bg-primary hover:text-white ease duration-300"
-              href="#"
-              >Homiylar</a
+            <RouterLink
+              class="py-3.5 px-14 inline-block hover:bg-blue-400 hover:text-white ease duration-300"
+              to="/sponsors"
+              >Homiylar</RouterLink
             >
           </li>
           <li class="border-r-2 border-y-2 border-bluee-100 rounded-r-md">
-            <a
-              class="py-3.5 px-14 inline-block hover:bg-primary hover:text-white ease duration-300 rounded-r-md"
-              href="#"
-              >Talabalar</a
+            <RouterLink
+              class="py-3.5 px-14 inline-block hover:bg-blue-400 hover:text-white ease duration-300 rounded-r-md"
+              to="/students"
+              >Talabalar</RouterLink
             >
           </li>
         </ul>
@@ -65,3 +65,10 @@
     </div>
   </div>
 </template>
+
+<style>
+  .router-link-exact-active {
+    background-color: #3366FF;
+    color: white;
+  }
+</style>

@@ -1,4 +1,26 @@
 <script setup lang="ts">
+// import axios from 'axios'
+
+// export default {
+//     name: 'Sponsors',
+//     data () {
+//         return{
+//             sponsors: [],
+//             errors: [],
+//         }
+//     },
+//     created () {
+//         axios.get('https://club.metsenat.uz/api/v1/sponsor-list/?format=json')
+//         .then(response => {
+//             this.sponsors = response.data
+//             console.log(response)
+//         })
+//         .catch(e => {
+//             this.errors.push(e)
+//         })
+//     }
+// }
+
 const sponsors = [
   {
     id: 594,
@@ -30,7 +52,7 @@ const sponsors = [
     firm: "",
     spent: 0,
     created_at: "2022-09-25T09:43:01.365364+05:00",
-    get_status_display: "Yangi",
+    get_status_display: "Tasdiqlangan",
   },
   {
     id: 590,
@@ -46,7 +68,7 @@ const sponsors = [
     firm: "",
     spent: 0,
     created_at: "2022-09-08T23:49:54.236924+05:00",
-    get_status_display: "Yangi",
+    get_status_display: "Bekor qilingan",
   },
   {
     id: 589,
@@ -62,7 +84,7 @@ const sponsors = [
     firm: "",
     spent: 0,
     created_at: "2022-09-05T11:18:58.264395+05:00",
-    get_status_display: "Yangi",
+    get_status_display: "Moderatsiyada",
   },
   {
     id: 588,
@@ -110,7 +132,7 @@ const sponsors = [
     firm: "",
     spent: 0,
     created_at: "2022-08-15T17:46:55.760537+05:00",
-    get_status_display: "Tasdiqlangan",
+    get_status_display: "Moderatsiyada",
   },
   {
     id: 585,
@@ -126,7 +148,7 @@ const sponsors = [
     firm: "",
     spent: 0,
     created_at: "2022-08-14T07:42:54.497846+05:00",
-    get_status_display: "Bekor qilingan",
+    get_status_display: "Moderatsiyada",
   },
   {
     id: 584,
@@ -180,21 +202,35 @@ const sponsors = [
           </tr>
         </thead>
         <tbody>
-          <tr v-for="sponsor in sponsors" class="text-sm text-gray-500">
+          <tr
+            v-for="sponsor in sponsors"
+            :key="sponsor.id"
+            class="text-sm text-gray-500"
+          >
             <td class="py-4 px-4 text-dark bg-white border-b">
-                <span> {{ sponsor.id }} </span>
+              <span> {{ sponsor.id }} </span>
             </td>
-            <td class="py-4 text-dark font-medium bg-white border-b">{{ sponsor.full_name }}</td>
-            <td class="py-4 tabular-nums text-center text-dark bg-white border-b">
+            <td class="py-4 text-dark font-medium bg-white border-b">
+              {{ sponsor.full_name }}
+            </td>
+            <td
+              class="py-4 tabular-nums text-center text-dark bg-white border-b"
+            >
               {{ sponsor.phone }}
             </td>
-            <td class="py-4 tabular-nums text-center font-medium text-dark bg-white border-b">
+            <td
+              class="py-4 tabular-nums text-center font-medium text-dark bg-white border-b"
+            >
               {{ sponsor.sum }} <span class="text-gray-400">UZS</span>
             </td>
-            <td class="py-4 tabular-nums text-center font-medium text-dark bg-white border-b">
+            <td
+              class="py-4 tabular-nums text-center font-medium text-dark bg-white border-b"
+            >
               {{ sponsor.spent }} <span class="text-gray-400">UZS</span>
             </td>
-            <td class="py-4 tabular-nums text-center text-dark bg-white border-b">
+            <td
+              class="py-4 tabular-nums text-center text-dark bg-white border-b"
+            >
               {{ sponsor.created_at }}
             </td>
             <td class="py-4 text-center bg-white border-b">
@@ -213,7 +249,9 @@ const sponsors = [
                 {{ sponsor.get_status_display }}
               </span>
             </td>
-            <td class="py-4 tabular-nums text-center text-dark bg-white border-b">
+            <td
+              class="py-4 tabular-nums text-center text-dark bg-white border-b"
+            >
               <img class="inline-block" src="/img/icons/eye.svg" alt="eye" />
             </td>
           </tr>
