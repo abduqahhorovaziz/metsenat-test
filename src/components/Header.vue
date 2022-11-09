@@ -5,7 +5,9 @@
 <template>
   <div class="container mx-auto px-5">
     <div class="flex items-center py-3">
-      <img src="/img/logo.svg" alt="Logo" />
+      <a href="#">
+        <img src="/img/logo.svg" alt="Logo" />
+      </a>
       <div class="ml-auto flex items-center">
         <div class="flex items-center p-1 pl-5 mr-10 rounded-md bg-gray-100">
           <p class="font-display text-dark mr-6 text-sm">Shohrux</p>
