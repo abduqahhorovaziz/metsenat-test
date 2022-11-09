@@ -16,7 +16,7 @@ export default {
             // console.log(response)
         })
         .catch(e => {
-            this.errors.push(e)
+            this.errors.push()
         })
     }
 }
@@ -204,49 +204,49 @@ export default {
         <tbody>
           <tr
             v-for="sponsor in sponsors"
-            :key="sponsor.id"
+            :key="sponsor['id']"
             class="text-sm text-gray-500"
           >
             <td class="py-4 px-4 text-dark bg-white border-b">
-              <span> {{ sponsor.id }} </span>
+              <span> {{ sponsor['id'] }} </span>
             </td>
             <td class="py-4 text-dark font-medium bg-white border-b">
-              {{ sponsor.full_name }}
+              {{ sponsor['full_name'] }}
             </td>
             <td
               class="py-4 tabular-nums text-center text-dark bg-white border-b"
             >
-              {{ sponsor.phone }}
+              {{ sponsor['phone'] }}
             </td>
             <td
               class="py-4 tabular-nums text-center font-medium text-dark bg-white border-b"
             >
-              {{ sponsor.sum }} <span class="text-gray-400">UZS</span>
+              {{ sponsor['sum'] }} <span class="text-gray-400">UZS</span>
             </td>
             <td
               class="py-4 tabular-nums text-center font-medium text-dark bg-white border-b"
             >
-              {{ sponsor.spent }} <span class="text-gray-400">UZS</span>
+              {{ sponsor['spent'] }} <span class="text-gray-400">UZS</span>
             </td>
             <td
               class="py-4 tabular-nums text-center text-dark bg-white border-b"
             >
-              {{ sponsor.created_at }}
+              {{ sponsor['created_at'] }}
             </td>
             <td class="py-4 text-center bg-white border-b">
               <span
                 class="font-medium capitalize"
                 :class="{
-                  'text-status-blue': sponsor.get_status_display === 'Yangi',
+                  'text-status-blue': sponsor['get_status_display'] === 'Yangi',
                   'text-status-orange':
-                    sponsor.get_status_display === 'Moderatsiyada',
+                    sponsor['get_status_display'] === 'Moderatsiyada',
                   'text-status-yellow':
-                    sponsor.get_status_display === 'Tasdiqlangan',
+                    sponsor['get_status_display'] === 'Tasdiqlangan',
                   'text-status-gray':
-                    sponsor.get_status_display === 'Bekor qilingan',
+                    sponsor['get_status_display'] === 'Bekor qilingan',
                 }"
               >
-                {{ sponsor.get_status_display }}
+                {{ sponsor['get_status_display'] }}
               </span>
             </td>
             <td
