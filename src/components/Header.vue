@@ -11,7 +11,9 @@
           <p class="font-display text-dark mr-6 text-sm">Shohrux</p>
           <img src="/img/user.svg" alt="User" />
         </div>
-        <img src="/img/log-out.svg" alt="logout" />
+        <RouterLink to="/login">
+          <img src="/img/log-out.svg" alt="logout" />
+        </RouterLink>
       </div>
     </div>
 
